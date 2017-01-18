@@ -1,7 +1,4 @@
 <?php
-include 'openid.php';
-include 'steamauth.php';
-
 session_start();
 $steam = new SteamAuth();
 $steam->setReturnUrl('example.php');
