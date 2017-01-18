@@ -14,7 +14,7 @@ class SteamAuth{
 
     public function setSteamKey($api_key){
         if(strpos(file_get_contents("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={$api_key}&steamids=X"),'Forbidden') !== false)
-            throw new Exception('Invalid Stram API key');
+            throw new Exception('Invalid Steam API key');
 
         $this->api_key = $api_key;
     }
